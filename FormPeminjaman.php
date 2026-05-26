@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Makassar');
 
 require "Model.php";
 require "Koneksi.php";
@@ -144,7 +145,7 @@ if(isset($data['id_buku'])){
 <input type="date"
 name="tgl_pinjam"
 class="form-control"
-value="<?= $data['tgl_pinjam'] ?? ''; ?>">
+value="<?= $data['tgl_pinjam'] ?? date('Y-m-d'); ?>">
 
 </div>
 
@@ -155,7 +156,9 @@ value="<?= $data['tgl_pinjam'] ?? ''; ?>">
 <input type="date"
 name="tgl_kembali"
 class="form-control"
-value="<?= $data['tgl_kembali'] ?? ''; ?>">
+min="<?= date('Y-m-d'); ?>"
+max="<?= date('Y-m-d', strtotime('+7 days')); ?>"
+value="<?= $data['tgl_kembali'] ?? date('Y-m-d', strtotime('+7 days')); ?>">
 
 </div>
 
