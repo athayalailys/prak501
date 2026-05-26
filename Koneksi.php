@@ -1,10 +1,10 @@
 <?php
 
 $koneksi = mysqli_connect(
-    "localhost",
-    "root",
-    "",
-    "prak501"
+    "sql310.infinityfree.com",
+    "if0_42023168",
+    "KdnLhn1YbsH",
+    "if0_42023168_prak501"
 );
 
 if(!$koneksi){
