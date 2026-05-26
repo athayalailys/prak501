@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Makassar');
 
 require "Model.php";
 
@@ -98,7 +99,7 @@ class="form-control"><?= $data['alamat'] ?? ''; ?></textarea>
 <input type="date"
 name="tgl_mendaftar"
 class="form-control"
-value="<?= $data['tgl_mendaftar'] ?? ''; ?>">
+value="<?= $data['tgl_daftar'] ?? date('Y-m-d'); ?>">
 
 </div>
 
